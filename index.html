@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="icon" type="image/x-icon" href="./images/half-dead.svg">
+        <script type="text/javascript" src="./script.js" crossorigin="anonymous" defer></script>
+    <title>Game Of Life</title>
+</head>
+<body>
+    <header>
+        <h1>The Game Of Life</h1>
+    </header>
+    <canvas id="game-board"></canvas>
+    <main>
+        <section>
+            <h2>A História de John Conway</h2>
+            <p>John Horton Conway, nascido em 26 de dezembro de 1937, em Liverpool, Inglaterra, foi um matemático britânico cujas contribuições inovadoras deixaram um legado profundo e duradouro em várias áreas da matemática e da ciência da computação. Conhecido por seu trabalho em teoria dos jogos, teoria dos grupos, geometria, teoria dos números e topologia, Conway era uma figura carismática e uma mente brilhante que encantava colegas e estudantes com sua paixão pela matemática.</p>
+            <h2>Primeiros Anos e Educação</h2>
+            <p>Conway demonstrou uma aptidão precoce para a matemática. Aos 11 anos, já lia textos avançados sobre o assunto. Ele ingressou no Gonville and Caius College, em Cambridge, onde estudou sob a orientação de Harold Davenport, um matemático renomado. Sua tese de doutorado, concluída em 1964, focou na teoria dos números.</p>
+            <h2>Contribuições Matemáticas</h2>
+            <h3>O Jogo da Vida</h3>
+            <p>Uma das contribuições mais famosas de Conway é o "Jogo da Vida" (ou "Game of Life"), um autômato celular que ele desenvolveu em 1970. Este jogo não é um jogo no sentido tradicional, mas sim um sistema dinâmico discreto que simula a evolução de células em uma grade bidimensional. As células podem estar "vivas" ou "mortas" e evoluem de acordo com regras simples, que produzem um comportamento complexo e muitas vezes imprevisível. O Jogo da Vida inspirou pesquisas em sistemas complexos e teoria do caos, além de influenciar áreas como biologia, física e ciência da computação.</p>
+            <h3>Grupos de Conway e Monstro</h3>
+            <p>Conway também fez contribuições significativas à teoria dos grupos, especialmente com a descoberta dos Grupos de Conway. Estes grupos estão relacionados ao Monstro, um dos maiores e mais complexos grupos esporádicos. Seu trabalho ajudou a mapear a "Atlas of Finite Groups," uma referência crucial para matemáticos.</p>
+            <h2>Ensino e Legado</h2>
+            <p>Conway era conhecido não apenas por suas descobertas matemáticas, mas também por seu estilo de ensino cativante. Ele ensinou na Universidade de Cambridge e, mais tarde, na Universidade de Princeton, onde influenciou gerações de matemáticos.</p>
+            <h2>Prêmios e Reconhecimentos</h2>
+            <p>Ao longo de sua carreira, Conway recebeu inúmeros prêmios e reconhecimentos, incluindo a Medalha Berwick, a Medalha Polya e o Prêmio Nemmers em Matemática. Ele foi eleito membro da Royal Society em 1981, um reconhecimento de sua contribuição excepcional à matemática.</p>
+            <h2>Vida Pessoal e Morte</h2>
+            <p>John Conway era um personagem excêntrico e carismático, conhecido por sua personalidade vibrante e suas habilidades em truques de cartas e problemas de lógica. Ele faleceu em 11 de abril de 2020, devido a complicações da COVID-19. Sua morte foi uma grande perda para a comunidade matemática, mas seu legado continua vivo através de suas inúmeras contribuições e do impacto duradouro que teve em seus alunos e colegas.</p>
+            <img id="img1" src="./images/small.jpg">
+            <img id="img2" src="./images/large.jpg">
+        </section>
+        <section>
+            <h2>Simplicidade e Complexidade</h2>
+            <h3>Regras Básicas</h3>
+            <p>O Jogo da Vida é um autômato celular que opera em uma grade bidimensional de células. Cada célula pode estar em um de dois estados: viva ou morta. A evolução do jogo segue quatro regras simples:</p>
+            <ol>
+                <li>Uma célula viva com menos de dois vizinhos vivos morre de solidão.</li>
+                <li>Uma célula viva com dois ou três vizinhos vivos continua viva.</li>
+                <li>Uma célula viva com mais de três vizinhos vivos morre de superpopulação.</li>
+                <li>Uma célula morta com exatamente três vizinhos vivos se torna viva por reprodução.</li>
+            </ol>
+            <p>Apesar de sua simplicidade, essas regras geram um comportamento incrivelmente complexo e muitas vezes imprevisível, resultando em padrões que podem crescer, mudar de forma ou desaparecer.</p>
+            <h2>Emergência e Complexidade</h2>
+            <h3>Padrões Interessantes</h3>
+            <p>A simplicidade das regras do Jogo da Vida leva à emergência de padrões complexos. Alguns dos padrões mais notáveis incluem:</p>
+            <ul>
+                <li>Blocos e Blinques: Formas estáveis que permanecem inalteradas de geração em geração.</li>
+                <li>Osiladores: Padrões que retornam ao seu estado inicial após um número fixo de gerações.</li>
+                <li>Naves: Padrões que se movem pelo espaço da grade ao longo do tempo.</li>
+                <li>Gliders: Pequenas formas móveis que se deslocam diagonalmente pela grade e são usadas para transmitir informação.</li>
+            </ul>
+            <p>Esses padrões mostram como sistemas simples podem gerar comportamentos extremamente complexos e diversificados, ilustrando o conceito de emergência em sistemas dinâmicos.</p>
+            <h2>Aplicações e Implicações</h2>
+            <h3>Modelagem de Sistemas Complexos</h3>
+            <p>O Jogo da Vida tem aplicações em diversas áreas, incluindo:</p>
+            <ul>
+                <li><strong>Biologia:</strong> Para modelar o crescimento de populações e a interação entre organismos.</li>
+                <li><strong>Física:</strong> Em estudos de sistemas dinâmicos e teoria do caos.</li>
+                <li><strong>Computação:</strong> Como exemplo de computação baseada em regras simples e como base para estudos em teoria da computação e autômatos celulares.</li>
+                <li><strong>Arte e Design:</strong> Inspirando artistas e designers na criação de padrões visuais e sonoros.</li>
+            </ul>
+            <h3>Computação Universal</h3>
+            <p>Um dos aspectos mais surpreendentes do Jogo da Vida é que ele é Turing-completo. Isso significa que, com a configuração correta de células iniciais, ele pode simular qualquer algoritmo de um computador universal. Essa descoberta foi revolucionária, mostrando que um sistema com regras simples pode, teoricamente, realizar qualquer cálculo computacional.</p>
+            <h2>Fascínio e Comunidade</h2>
+            <h3>Exploração e Descobertas</h3>
+            <p>Desde sua criação, o Jogo da Vida capturou a imaginação de matemáticos, cientistas e entusiastas. Comunidades inteiras se formaram em torno da exploração de novos padrões, regras alternativas e variações do jogo. Esse interesse contínuo levou à criação de softwares e plataformas onde as pessoas podem experimentar com o Jogo da Vida e compartilhar suas descobertas.</p>
+            <h3>Educação e Popularização</h3>
+            <p>O Jogo da Vida também é uma ferramenta educacional poderosa. Ele ilustra conceitos matemáticos e científicos de forma visual e intuitiva, tornando-os acessíveis a estudantes e curiosos. Sua popularidade ajudou a divulgar a matemática e a ciência da computação a um público mais amplo.</p>
+        </section>
+    </main>
+    <footer>
+        <p id="last-paragraph">Este site foi desenvolvido por Andrew Rodrigues, única e exclusivamente para fins didáticos. Caso algo no site não esteja de acordo com o direito de propriedade intelectual, entre imediatamente em contato com o seu criador. Os códigos-fonte estão sob licença MIT e disponíveis no <a href="https://github.com/AndrewRodrigues-IFJCR/game_of_life">repositório</a>.</p>
+    </footer>
+</body>
+</html>

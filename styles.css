@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+
+html, body, header, footer  { 
+    width  : 100vw;
+    height : 100vh; 
+    margin : 0;
+    padding: 0;
+}
+
+header, footer{
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    color           : white;
+    background-color: black;
+}
+
+header {
+    top : 0;
+    left: 0;
+    height: 10vh;
+    position  :  fixed;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    flex: 1;
+    padding: 0 5vw;
+}
+
+
+p {
+    text-align: justify;
+}
+
+footer {
+    width: auto;
+    height: 30vh;
+    margin-top: 10vh;
+    padding: 10%;
+    background-color: black;
+}
+
+canvas {
+    margin: 15vh 5vw;
+    width: 90vw;
+    image-rendering: pixelated;
+    background-color: black;
+}
+
+/*---------------------------------------------------------- */
+img { max-width: 100%; }
+@media (orientation: portrait  ) { #img2{ display: none; } }
+@media (orientation: landscape ) { #img1{ display: none; } }
+
